@@ -289,6 +289,7 @@ class BayesSearchCV(BaseSearchCV):
         self.random_state = random_state
         self.optimizer_kwargs = optimizer_kwargs
         self._check_search_space(self.search_spaces)
+        self.fit_params = fit_params
 
         super(BayesSearchCV, self).__init__(
              estimator=estimator, scoring=scoring,
@@ -395,6 +396,7 @@ class BayesSearchCV(BaseSearchCV):
                 X, y, self.scorer_,
                 train, test, self.verbose, parameters,
                 return_train_score=self.return_train_score,
+                fit_params=self.fit_params,
                 return_n_test_samples=True,
                 return_times=True, return_parameters=True,
                 error_score=self.error_score
