@@ -394,7 +394,6 @@ class BayesSearchCV(BaseSearchCV):
                 clone(base_estimator),
                 X, y, self.scorer_,
                 train, test, self.verbose, parameters,
-                fit_params=self.fit_params,
                 return_train_score=self.return_train_score,
                 return_n_test_samples=True,
                 return_times=True, return_parameters=True,
