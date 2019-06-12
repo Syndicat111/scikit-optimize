@@ -291,7 +291,7 @@ class BayesSearchCV(BaseSearchCV):
         self._check_search_space(self.search_spaces)
 
         super(BayesSearchCV, self).__init__(
-             estimator=estimator, scoring=scoring, fit_params=fit_params,
+             estimator=estimator, scoring=scoring,
              n_jobs=n_jobs, iid=iid, refit=refit, cv=cv, verbose=verbose,
              pre_dispatch=pre_dispatch, error_score=error_score,
              return_train_score=return_train_score)
